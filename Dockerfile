@@ -17,13 +17,13 @@ RUN yum update -y && \
 COPY ./requirements.txt /app/requirements.txt
 12
 13
-WORKDIR /app
+WORKDIR /web
 14
 15
 RUN pip install -r requirements.txt
 16
 17
-COPY . /app
+COPY . /web
 18
 19
-CMD [ "python3", "./app.py" ]
+CMD [ "python3", "./web/app.py" ]
